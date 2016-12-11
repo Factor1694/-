@@ -1,14 +1,14 @@
 #include <stdio.h>
-// максимальный размер массива
+// MAXIMAL RAZMER MATRIX
 #define nMax 1000
 
 int input_and_calc_positives(int n){
-	// количество положительных элементов
+	// KOLICHESTVO POLOZITELNIH ELEMETS
 	int iPositiveNum = 0;
-	// среднее арифметическое
+	// SREDNEE ARIFMETIC ZNACHENIE
 	double dAverage = 0;
 
-	// validation
+	// PROVERKA
 	if (n < 1 || n > nMax)
 	{
 		printf("Vi bili ne pravi. Vsego horoshego.");
@@ -30,12 +30,12 @@ int input_and_calc_positives(int n){
 
 	dAverage /= n;
 
-	printf("Spasibo!\n\nVi vveli %d polojitel'nih chisla.\nIh srednee arifmeticheskoe = %lf", iPositiveNum, dAverage);
+	printf("\n\nVi vveli %d polojitel'nih chisla.\nIh srednee arifmeticheskoe = %lf", iPositiveNum, dAverage);
 }
 
 int main (int argc, char *argv[])
 {
-	// количество элементов
+	// KOLICHESTVO ELEMENTS
 	int n = 1;
 
 	printf ("Vvedite razmer massiva (1- %d): ", nMax);
