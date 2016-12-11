@@ -30,7 +30,6 @@ double binaryToDecimal( double binaryNumber )
 	else
 		return -1;
 }
-
 int main( void )
 {
     double binaryNumber;
@@ -50,6 +49,5 @@ int main( void )
 	}
 	else
 		printf( "VVEDITE CHISLO >0!" );
-
     return 0;
 }
