@@ -3,29 +3,29 @@
 
 int main (int argc, char *argv[])
 {
-	// размеры матриц
+	// Razmeri Matric
 	int ai, aj, bi, bj;
 	printf ("Vvedite razmeri martic A (MxN) i B (KxL) cherez probel (1-%d).\nM, N, K, L: ", nMax);
 	scanf("%d %d %d %d", &ai, &aj, &bi, &bj);
 
-	// Проверка
+	// Proverka
 	if (ai < 1 || aj < 1 || bi < 1 || bj < 1 || ai > nMax || aj > nMax || bi > nMax || bj > nMax)
 	{
-		printf("Nepravil'nie razmeri matric. Dosvidania.");
+		printf("Neverni razmeri matric.");
 		return 0;
 	}
 	if (aj != bi)
 	{
-		printf ("N doljno bit' ravno K. Soryan.");
+		printf ("N doljno bit' ravno K.");
 		return 0;
 	}
 
-	// массивы матриц A, B и C
+	// Massivs Matrix ABC
 	int A[ai][aj], B[bi][bj], C[ai][bj];
-	printf("\nTeper' vvedite elementi matric.\n");
+	printf("\nVvedite elementi matric.\n");
 	int i, j;
 
-	// вводим элементы матрицы A
+	// Vvedite Elements Matrix A
 	for (i = 0; i < ai; i++)
 		for (j = 0; j < aj; j++)
 		{
@@ -33,7 +33,7 @@ int main (int argc, char *argv[])
 			scanf("%d", &A[i][j]);
 		}
 
-	// вводим элементы матрицы B
+	// Vvedite Elements Matrix B
 	for (i = 0; i < bi; i++)
 		for (j = 0; j < bj; j++)
 		{
@@ -42,7 +42,7 @@ int main (int argc, char *argv[])
 		}
 	printf("\n");
 
-	// вычисляем матрицу C
+	// Vichislaem C
 	int dCurElement;
 	int k;
 
@@ -55,7 +55,7 @@ int main (int argc, char *argv[])
 			C[i][j] = dCurElement;
 		}
 
-	// выводим матрицу С на экран
+	// Vivodim C na Ikran
 	for (i = 0; i < ai; i++)
 	{
 		for (j = 0; j < bj; j++)
