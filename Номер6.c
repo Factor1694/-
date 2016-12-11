@@ -7,7 +7,6 @@ double TransformToCelsus (int iShkala, double dGraduses)
 	switch (iShkala)
 	{
 		case 1:
-		// doing nothing
 		break;
 
 		case 2:
@@ -38,18 +37,18 @@ int main (int argc, char *argv[])
 	int iShkala = 0;
 	double dGraduses;
 
-	// ввод шкалы измерения
+	// CHOOSE SHKALU IZMERENIYA
 	printf("1 - Celsus\n2 - Farengate\n3 - Kelvin\nViberite shkalu (1-3): ");
 	scanf("%d", &iShkala);
 
 	// input data validating
 	if (iShkala > 3 || iShkala < 1)
 	{
-		printf("Sorry, you're wrong. Goodbye.");
+		printf("ERROW!!!");
 		return 0;
 	}
 
-	// ввод численного значения градусов
+	// VVOD CHISLENNOGO ZNACHENIA (V GRADUSAH)
 	printf("Skolko gradusov: ");
 	scanf("%lf", &dGraduses);
 
