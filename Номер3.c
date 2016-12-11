@@ -3,19 +3,19 @@
 int degree (int n, int d)
 {
 	if (d == 0)
-		return 1; // любое число в степени 0 == 1
+		return 1; // VVEDITE CHISLO V STEPENI 0 == 1
 	else if (d == 1)
-		return n; // n в степени 1 == n
-	else return (n * degree(n, d-1)); // рекурсия - возвращаем n * n_в_степени_(d-1)
+		return n; // n V STEPENI 1 == n
+	else return (n * degree(n, d-1)); // REKURSIA - (n * n)^(d-1) '^'=STEPEN (d-1)
 }
 
 int main (int argc, char *argv[])
 {
-	int n; // число, которое нужно возвести в степень (n == number)
-	int d; // степень, в которую возводим (d == degree)
-	int answ; // ответ
+	int n; // CHISLO, KOTOROE NADO VOZVESTI V STEPEN(n == number)
+	int d; //STEPEN, V KOTORUYU VOZVODIM  (d == degree)
+	int answ; // ANSWER
 
-	// пользователь вводит числа n и d
+	// VVODIM CHISLA n AND d
 	printf("Vvedite chislo N, kotoroe vozvodim v stepen D: ");
 	scanf("%d", &n);
 	printf("Vvedite stepen D: ");
