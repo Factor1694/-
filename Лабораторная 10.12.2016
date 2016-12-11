@@ -1,0 +1,101 @@
+var j,c,m,n,h,z,i: integer; 
+a:array[1..99,1..99] of integer; 
+b:array[1..99,1..99] of integer; 
+d:array[1..99,1..99] of integer; 
+begin; 
+
+//ЗАДАНИЕ НОМЕР 1 
+randomize; 
+write('(3<m<100) vvedite m = '); 
+readln (m); 
+write('(4<n<100) vvedite n = '); 
+readln (n); 
+writeln('ZADANIE 1'); 
+  for i:=1 to m do begin 
+    for j:=1 to n do begin 
+      a[i,j]:=random(100); 
+      write (a[i,j],' '); 
+    end; 
+    writeln(''); 
+  end; 
+//ЗАДАНИЕ НОМЕР 2 
+writeln('ZADANIE 2');
+for i:=1 to n do 
+  b[1,i]:=a[1,(n+1)-i]; 
+for i:=1 to n do 
+  b[2,i]:=a[m,(n+1)-i]; 
+for i:=1 to n do 
+  a[1,i]:=b[2,i]; 
+for i:=1 to n do 
+  a[m,i]:=b[1,i]; 
+for i:=1 to m do begin 
+  for j:=1 to n do begin 
+    write (a[i,j],' '); 
+  end; 
+  writeln(''); 
+end; 
+//ZADANIE 3 
+writeln('ZADANIE 3');
+c:=99; 
+for i:=1 to m do 
+  for j:=1 to n do begin 
+    if c>a[i,j] then begin 
+      c:=a[i,j]; 
+      h:=i; 
+      z:=j; 
+    end; 
+  end; 
+ 
+if ((h=1) and (z=1)) then begin 
+//sluchai 1 
+for i:=2 to m do 
+  for j:=2 to n do 
+    b[i-1,j-1]:=a[i,j]; 
+end 
+else 
+
+if ((h=m) and (z=n)) then begin 
+//sluchai 2 
+for i:=1 to m-1 do 
+  for j:=1 to n-1 do 
+    b[i,j]:=a[i,j]; 
+end 
+else 
+
+if ((h=m) and (z=1)) then begin 
+//sluchai 3 
+for i:=1 to m-1 do 
+  for j:=2 to n do 
+    b[i,j-1]:=a[i,j]; 
+end 
+else 
+
+if ((h=1) and (z=n)) then begin 
+//sluchai 4 
+for i:=2 to m do 
+  for j:=1 to n-1 do 
+    b[i-1,j]:=a[i,j];
+end
+else begin
+
+//sluchai 5 
+for i:=1 to m do 
+  for j:=1 to (z-1) do 
+    d[i,j]:=a[i,j]; 
+for i:=1 to m do 
+  for j:=(z+1) to n do 
+    d[i,j-1]:=a[i,j]; 
+for i:=1 to (h-1) do 
+  for j:=1 to n do 
+    b[i,j]:=d[i,j]; 
+for i:=(h+1) to m do 
+  for j:=1 to n do 
+    b[i-1,j]:=d[i,j]; 
+end; 
+
+for i:=1 to (m-1) do begin 
+  for j:=1 to (n-1) do 
+    write (b[i,j],' '); 
+    writeln(''); 
+end; 
+
