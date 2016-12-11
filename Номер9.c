@@ -1,10 +1,10 @@
 #include <stdio.h>
 int hex(char ch, int i, int k){
 printf("Vvod Stroki Simvolov");
-/* Ввод строки символов (окончание ввода символ “.” -точка)*/
+/* Vvod stroki simvolov. Okonchanie vvode simvol вЂњ.вЂќ -Tochka)*/
 do{
     ch = getchar();
-    /* Проверка символа исходной строки, является ли он 16-ричным числом; вычисляем i и k */
+    /* Proverka na 16-richnost simvola ishodnoi stroki; vichislenie i and k*/
     if ((ch>='0'&&ch<='9')|| (ch>='a' && ch<= 'f')||(ch >='A'&& ch <='F'))
         i++;
     k++;
@@ -17,7 +17,7 @@ else printf ("Etot Simvol Ishodnoi stroki ne est 16-richnoe chislo");
 int main (int argc, char*argv[]){
 char ch, q;
 int i, k, n;
-/* k=количество всех введенных символов, i=количество 16-ричных символов*/
+/* k=kolichestvo vvedennih simvolov, i=kolichestvo 16-richnih simvolov*/
 k=1;
 do{
     i=0;
