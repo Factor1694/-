@@ -1,12 +1,12 @@
 #include <stdio.h>
 #include <math.h>
 /**
-* double binaryToDecimal функция для перевода из двоичной в десятичную СС
-* @param double binary двоичное число, которое надо перевести
-* @var double binaryNumber - статичное двочиное число для рекурсии
-* @var int degree - статичная степень для перевода
-* @var double decimalNumber - статичное десятичное число, которое нужно вычислить
-* @var double modfHelper - поможет при вычислении разряда
+* double binaryToDecimal THIS IS FUNCTION DLYA EREVODA IZ 2-ICHNOI V 10-ICHNOY SS
+* @param double binary 2-ICHNOE CHISLO, KOTOROE NADO PEREVESTI
+* @var double binaryNumber - 2-ICHNOE STATICHNOE CHISLO DLYA REKURSII
+* @var int degree - STATICHNAYA STEPEN PEREVODA
+* @var double decimalNumber - 10-ICHNOE STATICHNOE CHISLO, KOTOROE NADO VICHISLIT
+* @var double modfHelper - FOR HELPING PRI VICHISLENII ZARYADA
 * @return decimalNumber
 */
 double binaryToDecimal( double binaryNumber )
@@ -37,7 +37,7 @@ int main( void )
     double decimalNumber;
 
     scanf("%lf", &binaryNumber);
-	//Проверка на валдиность числа
+	//PROVERKA
 	if (binaryNumber > 0)
 	{
 		decimalNumber = binaryToDecimal(binaryNumber);
@@ -45,11 +45,11 @@ int main( void )
 		if (decimalNumber != -1)
 			printf("%.0lf", decimalNumber);
 		else
-			printf("Введите корректное число!");
+			printf("VVEDITE KORREKTNOE CHISLO!");
 
 	}
 	else
-		printf( "Введите число больше нуля!" );
+		printf( "VVEDITE CHISLO >0!" );
 
     return 0;
 }
